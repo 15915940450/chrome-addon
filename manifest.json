@@ -1,12 +1,13 @@
 {
-  "name": "My First Extension",
-  "version": "1.0",
-  "manifest_version": 2,
-  "description": "The first extension that I made.",
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
-  "permissions": [
-    "http://www.baidu.com/"
-  ]
+    "manifest_version": 2,
+    "name": "我的时钟",
+    "version": "1.0",
+    "description": "我的第一个Chrome扩展",
+    "icons": {
+        "32": "icon32.png"
+    },
+    "browser_action": {
+        "default_title": "我的时钟",
+        "default_popup": "popup.html"
+    }
 }
