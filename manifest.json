@@ -1,22 +1,17 @@
 {
     "manifest_version": 2,
-    "name": "baidu在线状态",
+    "name": "天气预报",
     "version": "1.0",
-    "description": "监视baidu是否在线",
+    "description": "查看未来两周的天气情况",
     "icons": {
         "32": "icon32.png"
     },
-    "browser_action": {
-        "default_icon": {
-            "19": "images/icon19.png"
-        }
+    "browser_action":{
+      "default_title": "天气预报",
+      "default_popup": "popup.html"
     },
-    "background": {
-        "scripts": [
-            "js/status.js"
-        ]
-    },
+    "options_page": "options.html",
     "permissions": [
-        "https://www.baidu.com/"
+        "http://api.openweathermap.org/data/2.5/forecast?q=*"
     ]
 }
