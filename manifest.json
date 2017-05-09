@@ -1,15 +1,22 @@
 {
     "manifest_version": 2,
-    "name": "moving baidu",
+    "name": "baidu在线状态",
     "version": "1.0",
-    "description": "百度按鈕動來動去幹啥？",
+    "description": "监视baidu是否在线",
     "icons": {
         "32": "icon32.png"
     },
-    "content_scripts":[
-      {
-        "matches":["*://www.baidu.com/"],
-        "js":["js/baidu_moving.js"]
-      }
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon19.png"
+        }
+    },
+    "background": {
+        "scripts": [
+            "js/status.js"
+        ]
+    },
+    "permissions": [
+        "https://www.baidu.com/"
     ]
 }
