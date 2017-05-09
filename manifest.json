@@ -1,13 +1,15 @@
 {
     "manifest_version": 2,
-    "name": "我的时钟",
+    "name": "moving baidu",
     "version": "1.0",
-    "description": "我的第一个Chrome扩展",
+    "description": "百度按鈕動來動去幹啥？",
     "icons": {
         "32": "icon32.png"
     },
-    "browser_action": {
-        "default_title": "我的时钟",
-        "default_popup": "popup.html"
-    }
+    "content_scripts":[
+      {
+        "matches":["*://www.baidu.com/"],
+        "js":["js/baidu_moving.js"]
+      }
+    ]
 }
