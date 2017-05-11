@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "mark six",
+  "version": "1.0",
+  "description": "六合彩開獎結果",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/icon19.png",
+      "38": "img/icon38.png"
+    },
+    "default_title": "mark six",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://m.1396ck.com/"
+  ]
+}
