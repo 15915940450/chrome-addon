@@ -1,8 +1,10 @@
-function ajaxGET(url,callback){
+function ajaxGET(url,callback,err){
   var xmlhttp=new XMLHttpRequest();
   xmlhttp.onreadystatechange=function(){
     if(xmlhttp.readyState===4 && xmlhttp.status===200){
       callback(xmlhttp.responseText);
+    }else if(xmlhttp.readyState===4 && xmlhttp.status!=200 && err){
+      err();
     }
   };
   xmlhttp.open('GET',url,true);
@@ -37,4 +39,6 @@ ajaxGET('http://m.1396ck.com/stat/5?client_lang=zh-tw&year=2017',function(data){
   }else{
     eleTmp.innerHTML="無數據";
   }
+},function(){
+  alert('ajax fail');
 });
