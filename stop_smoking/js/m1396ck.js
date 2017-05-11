@@ -19,10 +19,11 @@ ajaxGET('http://m.1396ck.com/stat/5?client_lang=zh-tw&year=2017',function(data){
     var arrTd=[];
     var arrWeek=['日','一','二','三','四','五','六'];
     for(var i=0;i<arrData.length;i++){
-      var numY=Number(arrData[i].period.substring(0,4));
-      var numM=Number(arrData[i].period.substring(5,7))-1;
-      var numD=Number(arrData[i].period.substring(8,10));
-      var datePeriod=new Date(numY,numM,numD);  //var birthday = new Date(1995, 11, 17);
+      var arrYMD=arrData[i].period.split(/[\u4e00-\u9fa5]/ig);  //匹配中文[\u4e00-\u9fa5]
+      // var numY=Number(arrData[i].period.substring(0,4));
+      // var numM=Number(arrData[i].period.substring(5,7))-1;
+      // var numD=Number(arrData[i].period.substring(8,10));
+      var datePeriod=new Date(Number(arrYMD[0]),(Number(arrYMD[1])-1),Number(arrYMD[2]));  //var birthday = new Date(1995, 11, 17);
       // alert(datePeriod);
       arrTd[0]='<td>星期'+arrWeek[datePeriod.getDay()]+'</td>';
       arrTd[1]='<td>'+arrData[i].period+'</td>';
