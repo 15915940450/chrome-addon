@@ -6,10 +6,38 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: "Times New Roman", '新細明體', serif;
+  font-size: 14px;
 }
 body{
   width: 600px;
   height: 370px;
+}
+#tmp table{
+  width: 100%;
+  border-collapse: collapse;
+}
+#tmp table td,#tmp table th{
+  padding: 12px 5px;
+  text-align: left;
+  vertical-align: middle;
+  color:#919191;
+  border-bottom: 1px solid #E9E9E9;
+}
+#tmp table th{
+  color:#666;
+  border-bottom: 2px solid #E9E9E9;
+  font-size:11px;
+}
+#tmp table td:nth-child(3){
+  font-weight: 900;
+  font-size: 15px;
+  color: #222;
+  font-family: arial;
+  text-decoration: underline;
+}
+#tmp table tr:hover td{
+  background-color: #F9F9F9;
 }
 </style>
 </head>
@@ -18,8 +46,8 @@ body{
     <table>
       <thead>
         <tr>
-          <th>星期</th>
-          <th>期</th>
+          <th colspan="2">MARK SIX<!-- 星期 --></th>
+          <!-- <th>期</th> -->
           <th>特碼</th>
           <th>生肖</th>
           <th>五行</th>
