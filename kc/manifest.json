@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "kc",
+  "version": "1.0.1",
+  "description": "Ctrl+Alt+L",
+  "icons": {
+    "16": "img/kc_16.png",
+    "48": "img/kc_48.png",
+    "128": "img/kc_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/kc_19.png",
+      "38": "img/kc_38.png"
+    },
+    "default_title": "kc"
+  },
+  "content_scripts":[{
+    "matches":["*://www.baidu.com/","*://www.baidu.com/s*"],
+    "js":["js/kc.js"]
+    }],
+  "permissions":[
+    "https://www.baidu.com/"
+  ]
+}
