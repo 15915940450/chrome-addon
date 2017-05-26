@@ -4,20 +4,20 @@
   "version": "1.0.2",
   "description": "Ctrl+Alt+L",
   "icons": {
-    "16": "img/kc_16.png",
-    "48": "img/kc_48.png",
-    "128": "img/kc_128.png"
+    "16": "img/cal_16.png",
+    "48": "img/cal_48.png",
+    "128": "img/cal_128.png"
   },
   "browser_action": {
     "default_icon": {
-      "19": "img/kc_19.png",
-      "38": "img/kc_38.png"
+      "19": "img/cal_19.png",
+      "38": "img/cal_38.png"
     },
     "default_title": "Ctrl+Alt+L"
   },
   "content_scripts":[{
     "matches":["*://www.baidu.com/","*://www.baidu.com/s*"],
-    "js":["js/kc.js"]
+    "js":["js/cal.js"]
     }],
   "permissions":[
     "https://www.baidu.com/"
