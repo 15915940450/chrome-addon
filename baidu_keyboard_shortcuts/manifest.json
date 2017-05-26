@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "kc",
-  "version": "1.0.1",
+  "name": "baidu keyboard shortcuts",
+  "version": "1.0.2",
   "description": "Ctrl+Alt+L",
   "icons": {
     "16": "img/kc_16.png",
@@ -13,7 +13,7 @@
       "19": "img/kc_19.png",
       "38": "img/kc_38.png"
     },
-    "default_title": "kc"
+    "default_title": "Ctrl+Alt+L"
   },
   "content_scripts":[{
     "matches":["*://www.baidu.com/","*://www.baidu.com/s*"],
